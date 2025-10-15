@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     slidesPerView: 1,
     centeredSlides: false,
     autoplay: {
-      delay: 3500,
+      delay: 5000,
       disableOnInteraction: false,
     },
     navigation: {
