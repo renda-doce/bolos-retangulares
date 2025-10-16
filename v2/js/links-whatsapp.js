@@ -21,16 +21,18 @@ document.querySelectorAll('.link-group').forEach(a => {
       const botao_id = this.id ? this.id : 'sem-id';
 
       fbq('track', 'Lead', {
-        content_name: `Lead - Torta Palito`,
+        event_id: `lead_${Date.now()}`,
+        event_time: Math.floor(Date.now() / 1000),
+        content_name: `Lead - Bolos Retangulares v2`,
         content_id: botao_id,
-        value: 2.00,
+        value: 0.00,
         currency: 'BRL',
-        event_source: window.location.origin,
-        page_path: window.location.pathname,
+        event_source_url: window.location.href,
       });
 
       this.dataset.pixelSent = "true";
       console.log("✅ Evento Meta Pixel 'Lead' enviado com sucesso.");
+
     }
   });
 });
